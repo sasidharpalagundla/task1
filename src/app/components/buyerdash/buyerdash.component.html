@@ -1,0 +1,17 @@
+<button class="d-flex justify-content-end" (click)=" exit()">Previous Page</button>
+
+<div style="padding: 25px;" *ngIf="RowData.length != 0">
+    <ag-grid-angular #agGrid class="ag-theme-balham" [rowData]="RowData" [columnDefs]="columnDefs"
+        [domLayout]="domlayout" [defaultColDef]="defaultColDef" [pagination]="true" [paginationPageSize]="14"
+        [masterDetail]="masterdetails" [detailRowAutoHeight]="false"
+        [detailCellRendererParams]="detailCellRendererParams" [components]="" (gridReady)="onGridReady($event)"
+        [detailCellRenderer]="">
+    </ag-grid-angular>
+</div>
+
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-8bits" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+</ngx-spinner>
+
+<!--  -->

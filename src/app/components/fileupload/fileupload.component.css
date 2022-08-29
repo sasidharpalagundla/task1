@@ -1,0 +1,26 @@
+.text-right {
+    align-self: end;
+}
+
+.d-flex {
+    background-color: rgb(242, 242, 242);
+}
+
+/* .form-control {
+    margin-top: 1em;
+    width: 350px;
+} */
+
+#upload {
+    display: flex;
+    width: 30%;
+}
+
+#inp {
+    /* padding: 7px; */
+    height: fit-content;
+}
+
+.btn {
+    margin-left: 5px;
+}

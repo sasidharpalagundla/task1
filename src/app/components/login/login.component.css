@@ -1,0 +1,40 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 97.5vh;
+    background: linear-gradient(to right, #abbaab, #ffffff);
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 5px;
+    width: 350px;
+    /* margin-bottom: 1em; */
+    border-radius: 8px;
+    height: 30px;
+}
+
+ng-multiselect-dropdown {
+    width: 340px;
+    border-radius: 5px;
+}
+
+p {
+    font-weight: bolder;
+    font-size: 45px;
+}
+
+button {
+    background-color: #ffffff;
+    height: 2.2em;
+    border-radius: 8px;
+    border-color: #abbaab
+}

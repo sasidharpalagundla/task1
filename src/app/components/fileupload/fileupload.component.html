@@ -1,0 +1,32 @@
+<div class="d-flex">
+    <div class="text-left col">
+        <h2>PO UPLOAD</h2>
+    </div>
+    <div class="text-right col">
+        <strong class="badge rounded-pill bg-primary">Organization Type: </strong>
+        <span>{{org}}</span>
+        <strong class="badge rounded-pill bg-dark">Logged User: </strong>
+        <span>{{user}}</span>
+    </div>
+</div>
+
+<br>
+<h4>File Upload</h4>
+<div class="text-center" id="upload">
+    <input id="inp" #fileinp class="form-control" type="file" (change)="onChange($event)" accept=".xlsx">
+    <button class="btn  btn-outline-secondary" (click)="onUpload()"> Upload </button>
+    <button class="btn  btn-outline-secondary" (click)="reset()"> Reset </button>
+</div>
+
+<br>
+<div>
+    <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-8bits" [fullScreen]="true">
+        <p style="color: white"> Loading... </p>
+    </ngx-spinner>
+</div>
+
+<div *ngIf="flag">
+    <ag-grid-angular #agGrid style="height: 202.5px;" class="ag-theme-balham" [rowData]="rowData"
+        [columnDefs]="columnDefs" [defaultColDef]="defaultColDef">
+    </ag-grid-angular>
+</div>

@@ -1,0 +1,64 @@
+<div>
+    <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-8bits" [fullScreen]="true">
+        <p style="color: white"> Loading... </p>
+    </ngx-spinner>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <div class="card-box bg-blue">
+                <div class="inner">
+                    <h3> {{this.rowData[0].allOrdersCount}} </h3>
+                    <p>All Orders Count</p>
+                </div>
+                <a [routerLink]="['/buyerdash']" class="card-box-footer">View More <i
+                        class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card-box bg-green">
+                <div class="inner">
+                    <h3> {{this.rowData[0].shipmentsArrivingTodayCount}} </h3>
+                    <p>Shipments Arriving Today Count</p>
+                </div>
+                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card-box bg-orange">
+                <div class="inner">
+                    <h3> {{this.rowData[0].shipmentsInTransitCount }} </h3>
+                    <p>Shipments In Transit Count</p>
+                </div>
+                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card-box bg-red">
+                <div class="inner">
+                    <h3> {{this.rowData[0].shipmentsMissedDueDateCount }} </h3>
+                    <p>Shipments Missed Due Date Count</p>
+                </div>
+                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card-box bg-violet">
+                <div class="inner">
+                    <h3> {{this.rowData[0].shipmentsToBeNotifiedCount }} </h3>
+                    <p>Shipments To Be Notified Count</p>
+                </div>
+                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ------------------------------------------------------------------ -->
+
+<button (click)="dataG()">DataGrid</button> <br>
+<button (click)="upload()">FileUpload</button> <br>
+
+<!-- <a id="data" [routerLink]="['/data']">Data Grid</a> -->

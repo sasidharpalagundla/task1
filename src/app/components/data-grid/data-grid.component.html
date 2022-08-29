@@ -1,0 +1,25 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-8bits" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
+
+<div *ngIf="rowData.length != 0"> 
+  <!-- {{rowData.length}}  -->
+  <ag-grid-angular #agGrid style="height: 250px;" class="ag-theme-balham" [rowData]="rowData"
+    [detailRowHeight]="detailRowHeight" [columnDefs]="columnDefs" [defaultColDef]="defaultColDef" [masterDetail]="true"
+    [detailCellRendererParams]="detailCellRenderParams">
+  </ag-grid-angular>
+  <br>
+
+  <br>
+  <div *ngIf="flag">
+    <h2>SubTable</h2>
+    <ag-grid-angular #agGrid style="height: 250px;" class="ag-theme-balham" [rowData]="tableRow"
+      [detailRowHeight]="detailRowHeight" [columnDefs]="tableCol" [defaultColDef]="defaultColDef"
+      [detailCellRendererParams]="detailCellRenderParams">
+    </ag-grid-angular>
+  </div>
+
+
+
+
+  <!--  -->
