@@ -23,6 +23,7 @@ export class FileuploadComponent implements OnInit {
   flag: boolean = false;
   public defaultColDef: ColDef = {
     flex: 1,
+    resizable: true
   };
   InputVar: ElementRef | any;
 
@@ -68,7 +69,8 @@ export class FileuploadComponent implements OnInit {
   }
 
   reset() {
-    this.InputVar.nativeElement.value = "";
+    // console.log(this.InputVar)
+    // this.InputVar.nativeElement.value = "";
   }
 
   onUpload() {

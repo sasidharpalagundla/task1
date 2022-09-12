@@ -17,15 +17,15 @@ export class ManageService {
   }
 
   organizations() {
-    return this.http.get('http://202.65.145.178:3000/misc/orgs')
+    return this.http.get(this.baseUrl + '/misc/orgs')
   }
 
   userType(params: any) {
-    return this.http.get(`http://202.65.145.178:3000/misc/orgs/users`, { params: { orgTypeID: params.orgTypeID } })
+    return this.http.get(this.baseUrl + '/misc/orgs/users`, { params: { orgTypeID: params.orgTypeID } })
   }
 
   buyerDash(params: any) {
-    return this.http.get('http://202.65.145.178:3000/reports/buyerDashboard/allShipments', { params: { poType: params.poType, userId: params.userId, userType: params.userType } })
+    return this.http.get(this.baseUrl + '/reports/buyerDashboard/allShipments', { params: { poType: params.poType, userId: params.userId, userType: params.userType } })
   }
 
   upload(obj: any): Observable<any> {
